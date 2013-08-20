@@ -1,0 +1,17 @@
+name: ubuntu12.04-saltstack
+version: 0.0.1
+description: Base box to use for saltstack
+type : main
+platform : ubuntu@12.04
+keywords :
+  - saltstack
+packages :
+  - saltstack
+script : |
+  sudo apt-get update
+  sudo apt-get install python-software-properties
+  sudo add-apt-repository ppa:saltstack/salt -y
+  sudo apt-get update
+  sudo apt-get install salt-minion
+  type salt-call || { echo "salt not found"; exit 1; } 
+  
