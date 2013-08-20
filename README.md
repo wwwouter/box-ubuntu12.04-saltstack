@@ -2,6 +2,7 @@
 
 Base box for saltstack
 
+Installation according to http://docs.saltstack.com/topics/installation/ubuntu.html
 
 # License
 
